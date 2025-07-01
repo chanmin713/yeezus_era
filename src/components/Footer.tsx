@@ -20,7 +20,7 @@ const Footer: React.FC = () => (
         <span className="hover:underline cursor-pointer relative group">
           Team
           <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-max px-3 py-2 rounded bg-neutral-800 text-neutral-100 text-xs shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 whitespace-pre-line text-center">
-            @https://github.com/chanmin713/yeezus_era
+            chn_m1n
           </span>
         </span>
         <span className="text-primary-foreground/60 font-bold">|</span>

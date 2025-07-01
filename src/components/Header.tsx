@@ -1,8 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import MenuButton from "./MenuButton";
-
-interface HeaderProps {}
 
 const menuItems = [
   { key: "/tgfd", label: "Thank God For Drugs" },
@@ -10,7 +8,7 @@ const menuItems = [
   { key: "/yeezus2", label: "Yeezus 2" },
 ];
 
-const Header: React.FC<HeaderProps> = () => {
+const Header = () => {
   const location = useLocation();
 
   // 현재 경로에 따라 약칭 결정

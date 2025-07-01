@@ -16,7 +16,7 @@ const Yeezus2Page: React.FC = () => {
           {yeezus2Items.map((item: ArtItem, idx: number) => (
             <ItemCard
               key={idx}
-              img={`/img_files/${item.name}.jpg`}
+              img={`img_files/${item.name}.jpg`}
               title={item.name}
               onClick={() => setSelected(item)}
             />
@@ -25,7 +25,7 @@ const Yeezus2Page: React.FC = () => {
       </div>
       {selected && (
         <ItemModal
-          img={`/img_files/${selected.name}.jpg`}
+          img={`img_files/${selected.name}.jpg`}
           title={selected.name}
           artType={selected.artType}
           projectType={selected.projectType}

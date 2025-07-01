@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { yeezusItems } from "../items/yeezus";
+import { ArtItem } from "../items/artItems";
 import ItemCard from "../components/ItemCard";
 import ItemModal from "../components/ItemModal";
 
 const YeezusPage: React.FC = () => {
-  const [selected, setSelected] = useState<any | null>(null);
+  const [selected, setSelected] = useState<ArtItem | null>(null);
   return (
     <div className="mx-4 md:mx-8">
       <h2 className="text-2xl font-light tracking-tight text-left transition-all duration-300 mb-8">
@@ -15,7 +16,7 @@ const YeezusPage: React.FC = () => {
           {yeezusItems.map((item, idx) => (
             <ItemCard
               key={idx}
-              img={`/img_files/${item.name}.jpg`}
+              img={`img_files/${item.name}.jpg`}
               title={item.name}
               onClick={() => setSelected(item)}
             />
@@ -24,7 +25,7 @@ const YeezusPage: React.FC = () => {
       </div>
       {selected && (
         <ItemModal
-          img={`/img_files/${selected.name}.jpg`}
+          img={`img_files/${selected.name}.jpg`}
           title={selected.name}
           artType={selected.artType}
           projectType={selected.projectType}

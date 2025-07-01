@@ -19,9 +19,9 @@ const ItemCard: React.FC<ItemCardProps> = ({ img, title, onClick }) => (
     >
       <img
         src={
-          img.startsWith("/")
+          img.startsWith(import.meta.env.BASE_URL)
             ? img
-            : `/img_files/${img.replace(/^img_files[\/]/, "")}`
+            : `${import.meta.env.BASE_URL}${img.replace(/^\//, "")}`
         }
         alt={title}
         className="w-full max-h-60 object-contain rounded"
